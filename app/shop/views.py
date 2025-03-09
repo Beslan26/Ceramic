@@ -17,9 +17,8 @@ def about(request):
 
 
 def shop(request):
-    context = get_object_or_404(Category, id=1)
-    # context = {
-    #     'categories': Category.objects.all(),
-    #     'products': Product.objects.all(),
-    # }
-    return render(request, 'shop/shop.html', {'category': context})
+    context = {
+        'categories': Category.objects.all(),
+        'products': Product.objects.all(),
+    }
+    return render(request, 'shop/shop.html', context)

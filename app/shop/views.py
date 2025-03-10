@@ -22,3 +22,7 @@ def shop(request):
         'products': Product.objects.all(),
     }
     return render(request, 'shop/shop.html', context)
+
+
+def shop_single(request):
+    return render(request, 'shop/shop-single.html')
